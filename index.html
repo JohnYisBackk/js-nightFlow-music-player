@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Music Player UI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="page-shell">
+      <div class="bg-glow bg-glow-1"></div>
+      <div class="bg-glow bg-glow-2"></div>
+
+      <main class="player-layout container">
+        <!-- ============================================= -->
+        <!-- MAIN PLAYER CARD -->
+        <!-- ============================================= -->
+        <section class="player-card">
+          <div class="player-top">
+            <p class="section-label">Now Playing</p>
+            <button class="icon-btn" aria-label="More options">
+              <span>•••</span>
+            </button>
+          </div>
+
+          <div class="cover-wrap">
+            <img
+              id="cover"
+              class="cover-image"
+              src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1200&q=80"
+              alt="Album cover"
+            />
+            <div class="cover-overlay"></div>
+          </div>
+
+          <div class="song-meta">
+            <h1 id="songTitle">Midnight Vibes</h1>
+            <p id="songArtist">Lo-Fi Artist</p>
+          </div>
+
+          <div class="progress-section">
+            <div class="progress-track" id="progressTrack">
+              <div class="progress-fill" id="progressBar"></div>
+              <div class="progress-thumb"></div>
+            </div>
+
+            <div class="time-row">
+              <span id="currentTime">0:00</span>
+              <span id="duration">0:00</span>
+            </div>
+          </div>
+
+          <div class="controls">
+            <button
+              class="control-btn secondary-btn mode-btn"
+              id="shuffleBtn"
+              aria-label="Shuffle"
+            >
+              <span class="mode-icon">🔀</span>
+              <span class="mode-dot"></span>
+            </button>
+
+            <button
+              class="control-btn secondary-btn"
+              id="prevBtn"
+              aria-label="Previous song"
+            >
+              ⏮
+            </button>
+
+            <button
+              class="control-btn play-btn"
+              id="playBtn"
+              aria-label="Play or pause"
+            >
+              ▶
+            </button>
+
+            <button
+              class="control-btn secondary-btn"
+              id="nextBtn"
+              aria-label="Next song"
+            >
+              ⏭
+            </button>
+
+            <button
+              class="control-btn secondary-btn mode-btn"
+              id="repeatBtn"
+              aria-label="Repeat"
+            >
+              <span class="mode-icon">🔁</span>
+              <span class="mode-dot"></span>
+            </button>
+          </div>
+
+          <div class="bottom-row">
+            <div class="volume-box">
+              <span class="volume-icon">🔊</span>
+              <input
+                type="range"
+                id="volumeSlider"
+                class="volume-slider"
+                min="0"
+                max="100"
+                value="70"
+              />
+            </div>
+
+            <button class="ghost-btn" id="favoriteBtn">Add to Favorites</button>
+          </div>
+        </section>
+
+        <!-- ============================================= -->
+        <!-- PLAYLIST SIDEBAR -->
+        <!-- ============================================= -->
+        <aside class="playlist-card">
+          <div class="playlist-header">
+            <div>
+              <p class="section-label">Playlist</p>
+              <h2>Night Session</h2>
+            </div>
+
+            <span class="playlist-count" id="playlistCount">4 tracks</span>
+          </div>
+
+          <div class="playlist-list" id="playlistList">
+            <!-- Example playlist item structure -->
+            <!--
+            <article class="playlist-item active">
+              <img src="..." alt="Song cover" class="playlist-item-cover" />s
+
+              <div class="playlist-item-info">
+                <h3>Midnight Vibes</h3>
+                <p>Lo-Fi Artist</p>
+              </div>
+
+              <span class="playlist-item-duration">3:12</span>
+            </article>
+            -->
+          </div>
+        </aside>
+      </main>
+    </div>
+  </body>
+</html>
