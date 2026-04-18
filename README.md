@@ -7,7 +7,7 @@ Designed with a premium UI inspired by real-world streaming apps like Spotify an
 
 ## 🚀 Live Demo
 
-👉 
+👉 https://johnyisbackk.github.io/js-nightFlow-music-player/
 
 ---
 
